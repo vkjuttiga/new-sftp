@@ -1,0 +1,23 @@
+# SFTP users to provision.
+#
+# One entry per user:
+#   name - the SFTP user name
+#   path - folder INSIDE the bucket the user is locked into (no leading slash needed)
+#
+# Add one user or many, then run (from the repo root):
+#   bash scripts/provision-all.sh validate   # check the file only
+#   bash scripts/provision-all.sh plan       # see what terraform would do
+#   bash scripts/provision-all.sh apply      # create the users for real
+#
+# Users that already exist with the same path are skipped, so finished
+# entries can stay in the file. Removing an entry does NOT delete the user.
+#
+# Example (uncomment, edit):
+#
+# users:
+#   - name: acme
+#     path: acme/inbound
+#   - name: globex
+#     path: globex/drop
+
+users: []
