@@ -1,0 +1,16 @@
+# SFTP users to provision. One entry per user:
+#   name - SFTP username
+#   path - folder inside the bucket (no leading slash needed)
+#
+# Run: bash scripts/provision-all.sh validate|plan|apply
+#
+# Already-provisioned users are skipped; removing an entry does not delete
+# the user.
+#
+# users:
+#   - name: acme
+#     path: acme/inbound
+#   - name: globex
+#     path: globex/drop
+
+users: []
